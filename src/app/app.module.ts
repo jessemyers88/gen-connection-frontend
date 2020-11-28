@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GenHomeComponent } from './gen-home/gen-home.component';
+import { GenSignupComponent } from './gen-signup/gen-signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GenHomeComponent
+    GenHomeComponent,
+    GenSignupComponent
   ],
   imports: [
     BrowserModule,
