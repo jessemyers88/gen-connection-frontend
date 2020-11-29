@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { GenXerComponent } from './gen-xer/gen-xer.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'gen-xer', pathMatch: 'full'    
+  },
+
+  {
+    path: 'gen-xer', component: GenXerComponent
+  }
+
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
